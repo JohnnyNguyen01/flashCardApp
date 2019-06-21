@@ -113,14 +113,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:textSize="20sp"
         android:text="Here will be a question \nHere will be a question"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.121"
         app:layout_constraintStart_toEndOf="@+id/radio_group"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
+        app:layout_constraintVertical_bias="0.412" />
 
     <Button
         android:id="@+id/confirmBtn"
@@ -135,8 +135,8 @@
         android:text="CONFIRM"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintHorizontal_bias="0.922"
         app:layout_constraintStart_toEndOf="@+id/radio_group"
         app:layout_constraintTop_toBottomOf="@+id/questionTV"
-        app:layout_constraintVertical_bias="0.704" />
+        app:layout_constraintVertical_bias="0.883" />
 </android.support.constraint.ConstraintLayout>

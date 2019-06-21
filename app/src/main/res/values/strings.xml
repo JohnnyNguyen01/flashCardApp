@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">triviaQuiz</string>
+    <string name="startQuizBtn">START  QUIZ</string>
+</resources>

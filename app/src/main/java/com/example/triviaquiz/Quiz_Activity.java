@@ -8,6 +8,10 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/*
+* TODO: https://www.youtube.com/watch?v=tlgrX3HF6AI <-- next video
+*
+* */
 public class Quiz_Activity extends AppCompatActivity {
     private TextView questionTV;
     private TextView countDownTV;

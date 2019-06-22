@@ -10,10 +10,6 @@ import com.example.triviaquiz.QuizContract;
 
 import java.util.ArrayList;
 
-/*
- *  TODO: https://www.youtube.com/watch?v=pEDVdSUuWXE <----- next video
- * */
-
 public class QuizDBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "MyQuiz.db";
     private static final int DATABASE_VERSION = 1;

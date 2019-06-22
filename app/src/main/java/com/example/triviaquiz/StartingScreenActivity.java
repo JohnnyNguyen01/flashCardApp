@@ -1,5 +1,6 @@
 package com.example.triviaquiz;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ public class StartingScreenActivity extends AppCompatActivity {
     private TextView titleTv;
     private TextView highScoreTv;
     private Button startQuizBtn;
+    private Button quitBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,13 @@ public class StartingScreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startQuiz();
+            }
+        });
+        quitBtn = findViewById(R.id.quitBtn);
+        quitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.exit(0);
             }
         });
     }

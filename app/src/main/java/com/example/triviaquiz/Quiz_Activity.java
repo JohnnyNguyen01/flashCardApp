@@ -1,5 +1,6 @@
 package com.example.triviaquiz;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -16,9 +17,9 @@ import java.util.Collections;
 
 /*
  * TODO: https://www.youtube.com/watch?v=tlgrX3HF6AI <-- next video
- *
  * */
 public class Quiz_Activity extends AppCompatActivity {
+    public static final String EXTRA_SCORE = "extraScore";
     private TextView questionTV;
     private TextView countDownTV;
     private TextView scoreTV;
@@ -78,6 +79,7 @@ public class Quiz_Activity extends AppCompatActivity {
                     }
                 } else {
                     showNextQuestion();
+                    rbGroup.clearCheck();
                 }
             }
         });
@@ -153,6 +155,9 @@ public class Quiz_Activity extends AppCompatActivity {
     }
 
     private void finishQuiz() {
+        Intent returnIntent = new Intent();
+        returnIntent.putExtra(EXTRA_SCORE, score);
+        setResult(RESULT_OK, returnIntent);
         finish();
     }
 }

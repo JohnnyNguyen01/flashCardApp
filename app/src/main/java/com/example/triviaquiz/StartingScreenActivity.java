@@ -6,7 +6,10 @@ import android.content.SharedPreferences;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ActionMode;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.Menu;
@@ -33,7 +36,7 @@ public class StartingScreenActivity extends AppCompatActivity {
     *  Starts a new quiz Quiz_Activity activity
     * */
     private void startQuiz(){
-        Intent intent = new Intent(getApplicationContext(),Quiz_Activity.class);
+       Intent intent = new Intent(getApplicationContext(),Quiz_Activity.class);
         startActivityForResult(intent,REQUEST_CODE);
     }
 
@@ -91,9 +94,24 @@ public class StartingScreenActivity extends AppCompatActivity {
         });
     }
 
+    //Create (infalte) appbar menu with our main_menu.xml
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu( Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu,menu);
         return true;
     }
+
+
+    //program appbar menu buttons
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.addQuestion:
+                startActivity(new Intent(getApplicationContext(),AddQuestion.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }

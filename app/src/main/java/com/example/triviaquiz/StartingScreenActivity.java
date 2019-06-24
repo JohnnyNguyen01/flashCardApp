@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.view.Menu;
 
 public class StartingScreenActivity extends AppCompatActivity {
     private TextView titleTv;
@@ -88,5 +89,11 @@ public class StartingScreenActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu,menu);
+        return true;
     }
 }

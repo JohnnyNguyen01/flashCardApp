@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -18,7 +19,7 @@ import java.util.Collections;
 import java.util.Locale;
 
 /*
- * TODO: https://www.youtube.com/watch?v=tlgrX3HF6AI <-- next video
+ *
  * */
 public class Quiz_Activity extends AppCompatActivity {
     public static final String EXTRA_SCORE = "extraScore";
@@ -113,6 +114,11 @@ public class Quiz_Activity extends AppCompatActivity {
             questionCountTV.setText("Question: " + questionCounter + " / " + questionTotalCount);
             answered = false;
             confirmBtn.setText("CONFIRM");
+
+    //        Log.d("DEBUG", "showNextQuestion: " + option3RB.getText());
+            Log.d("DEBUG", "opt2: " + currentQuestion.getOption2());
+            Log.d("DEBUG", "opt3: " + currentQuestion.getOption3());
+            Log.d("DEBUG", "opt4: " + currentQuestion.getOption4());
 
             timeLeftInMillies = COUNTDOWN_TIME_IN_MILLIS;
             startCountDown();

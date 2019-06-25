@@ -31,7 +31,6 @@ public class Quiz_Activity extends AppCompatActivity {
     private RadioButton option1RB;
     private RadioButton option2RB;
     private RadioButton option3RB;
-    private RadioButton option4RB;
     private RadioGroup rbGroup;
     private static final long COUNTDOWN_TIME_IN_MILLIS = 30000;
 
@@ -66,7 +65,6 @@ public class Quiz_Activity extends AppCompatActivity {
         option1RB = findViewById(R.id.option1);
         option2RB = findViewById(R.id.option2);
         option3RB = findViewById(R.id.option3);
-        option4RB = findViewById(R.id.option4);
         rbGroup = findViewById(R.id.radio_group);
 
         textColourDefaultRB = option1RB.getTextColors();
@@ -82,7 +80,7 @@ public class Quiz_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (!answered) {
-                    if (option1RB.isChecked() || option2RB.isChecked() || option3RB.isChecked() || option4RB.isChecked()) {
+                    if (option1RB.isChecked() || option2RB.isChecked() || option3RB.isChecked()) {
                         checkAnswer();
                     } else {
                         Toast.makeText(Quiz_Activity.this, "Please select an answer", Toast.LENGTH_SHORT).show();
@@ -99,7 +97,7 @@ public class Quiz_Activity extends AppCompatActivity {
         option1RB.setTextColor(textColourDefaultRB);
         option2RB.setTextColor(textColourDefaultRB);
         option3RB.setTextColor(textColourDefaultRB);
-        option4RB.setTextColor(textColourDefaultRB);
+
 
         if (questionCounter < questionTotalCount) {
             currentQuestion = questionsList.get(questionCounter);
@@ -108,7 +106,7 @@ public class Quiz_Activity extends AppCompatActivity {
             option1RB.setText(currentQuestion.getOption1());
             option2RB.setText(currentQuestion.getOption2());
             option3RB.setText(currentQuestion.getOption3());
-            option4RB.setText(currentQuestion.getOption4());
+
 
             questionCounter++;
             questionCountTV.setText("Question: " + questionCounter + " / " + questionTotalCount);
@@ -176,7 +174,7 @@ public class Quiz_Activity extends AppCompatActivity {
         option1RB.setTextColor(Color.RED);
         option2RB.setTextColor(Color.RED);
         option3RB.setTextColor(Color.RED);
-        option4RB.setTextColor(Color.RED);
+
 
         switch (currentQuestion.getAnswerNr()) {
             case 1:

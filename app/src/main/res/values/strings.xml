@@ -3,4 +3,10 @@
     <string name="startQuizBtn">START  QUIZ</string>
     <string name="addQuestion">Add Question</string>
     <string name="about">About</string>
+
+    <string-array name="addQuestionActivitySpinnerItems">
+        <item>Option 1</item>
+        <item>Option 2</item>
+        <item>Option 3</item>
+    </string-array>
 </resources>

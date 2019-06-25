@@ -1,5 +1,6 @@
 package com.example.triviaquiz;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.view.ActionMode;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
@@ -29,6 +31,7 @@ public class StartingScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.starting_screen_activity);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         initialize();
     }
 
@@ -92,6 +95,7 @@ public class StartingScreenActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
+
     }
 
     //Create (infalte) appbar menu with our main_menu.xml

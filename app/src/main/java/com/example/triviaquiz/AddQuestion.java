@@ -33,6 +33,7 @@ public class AddQuestion extends AppCompatActivity implements AdapterView.OnItem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_question);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         initialize();
         handleAddQuestionBtn();
     }
